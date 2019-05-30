@@ -12,7 +12,7 @@ module.exports = {
     editLinks: true,
     nav: [
       { text: "前端", link: "/apiword" },
-      { text: "接口字段定义", link: "/api" },
+      { text: "后段", link: "/api" },
       { text: "附录：错误码", link: "/error" }
     ],
     sidebar: [
