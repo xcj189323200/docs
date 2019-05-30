@@ -6,11 +6,11 @@
 nowTime=`date +"%Y-%m-%d %H:%M:%S"`;
 
 # 拉取代码
-# git pull
+git pull
 # 添加修改文件
-# git add .
+git add .
 # 添加备注
-git commit -m "deploy$nowTime"
+git commit -m "发布于$nowTime"
 
 # 推到远程
 git push
