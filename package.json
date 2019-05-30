@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "vuepress dev ",
     "build": "vuepress build ",
-    "deploy":"source ./deploy.sh"
+    "deploy": "source ./deploy.sh"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "vuepress": "^0.14.11"
+  },
+  "dependencies": {
   }
 }

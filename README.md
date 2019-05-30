@@ -4,7 +4,7 @@ heroImage: /logo.png
 heroText: 前端FE博客
 tagline: 徐长剑个人技术文档
 actionText: 进入查看 →
-actionLink: /src/web/vuex
+actionLink: /src/web/vue/vuex
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
