@@ -1,5 +1,5 @@
 ---
-title: VUEX
+title: VUEX 123
 copyright: true
 password:
 tags:
