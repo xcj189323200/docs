@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 heroText: 前端FE博客
-tagline: 徐长剑个人技术文档
+tagline: 勾正前端技术文档
 actionText: 进入查看 →
 actionLink: /src/web/vue/vuex
 features:

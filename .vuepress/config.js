@@ -1,3 +1,4 @@
+var Router = require("./router/index");
 module.exports = {
   title: "前端FE技术文档",
   description: "Just playing around",
@@ -10,7 +11,7 @@ module.exports = {
     // 可选，默认为 master
     docsBranch: "master",
     // 默认为 true，设置为 false 来禁用
-    editLinks: true,
+    // editLinks: true,
 
     nav: [
       {
@@ -18,8 +19,12 @@ module.exports = {
         items: [
           {
             text: "vue",
-            link: "/src/web/vue/vuex"
+            link: Router.VUE.VUEX
           },
+          {
+            text: "typescript",
+            link: Router.TS.BASE_TYPES
+          }
         ]
       },
       {
@@ -27,7 +32,7 @@ module.exports = {
         items: [
           {
             text: "node",
-            link: "/src/web/node/express"
+            link: Router.NODE.EXPRESS
           }
         ]
       },
@@ -35,18 +40,29 @@ module.exports = {
       { text: "关于我", link: "/src/html/about" }
     ],
     sidebar: {
-      "/src/web/vue/vuex": [
+      [Router.TS.BASE]: [
+        {
+          title: "typeScript",
+          collapsable: true,
+          children: [
+            Router.TS.INTRODUCE,
+            Router.TS.BASE_TYPES,
+            Router.TS.BASE_INTERFACE_TYPES
+          ]
+        }
+      ],
+      [Router.VUE.BASE]: [
         {
           title: "vue",
           collapsable: true,
-          children: ["/src/web/vue/vuex"]
+          children: [Router.VUE.VUEX]
         }
       ],
-      "/src/web/node/": [
+      [Router.NODE.BASE]: [
         {
           title: "NODE",
           collapsable: true,
-          children: ["/src/web/node/express"]
+          children: [Router.NODE.EXPRESS]
         }
       ]
     }
@@ -55,7 +71,7 @@ module.exports = {
     // markdown-it-anchor 的选项
     anchor: { permalink: false },
     // markdown-it-toc 的选项
-    toc: { includeLevel: [1, 2] },
+    // toc: { includeLevel: [1, 2, 3, 4, 5] },
     config: md => {
       // 使用更多 markdown-it 插件！
       md.use(require("markdown-it"));
