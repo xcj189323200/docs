@@ -7,11 +7,13 @@ module.exports = {
     // 假定 GitHub。也可以是一个完整的 GitLab 网址
     repo: "https://github.com/xcj189323200/docs",
     // 如果你的文档不在仓库的根部
-    docsDir: "docs",
+    docsDir: "sources",
     // 可选，默认为 master
     docsBranch: "master",
     // 默认为 true，设置为 false 来禁用
     // editLinks: true,
+    //最后更新时间
+    astUpdated: "Last Updated",
 
     nav: [
       {
@@ -23,7 +25,7 @@ module.exports = {
           },
           {
             text: "typescript",
-            link: Router.TS.BASE_TYPES
+            link: Router.TS.INTRODUCE
           }
         ]
       },
@@ -36,8 +38,8 @@ module.exports = {
           }
         ]
       },
-      { text: "规范", link: "/src/rules/rules" },
-      { text: "关于我", link: "/src/html/about" }
+      { text: "规范", link: "/sources/rules/rules" },
+      { text: "关于我", link: "/sources/html/about" }
     ],
     sidebar: {
       [Router.TS.BASE]: [
@@ -46,8 +48,12 @@ module.exports = {
           collapsable: true,
           children: [
             Router.TS.INTRODUCE,
-            Router.TS.BASE_TYPES,
-            Router.TS.BASE_INTERFACE_TYPES
+            Router.TS.TYPES,
+            Router.TS.INTERFACE,
+            Router.TS.DECLARE,
+            Router.TS.ENUM,
+            Router.TS.CLASS,
+            Router.TS.VUE,
           ]
         }
       ],
@@ -68,13 +74,14 @@ module.exports = {
     }
   },
   markdown: {
+    lineNumbers: true,
+
     // markdown-it-anchor 的选项
     anchor: { permalink: false },
     // markdown-it-toc 的选项
-    // toc: { includeLevel: [1, 2, 3, 4, 5] },
+    toc: { includeLevel: [1, 2, 3, 4, 5] },
     config: md => {
       // 使用更多 markdown-it 插件！
-      md.use(require("markdown-it"));
     }
   }
 };

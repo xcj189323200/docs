@@ -1,8 +1,12 @@
-const BASE = "/src/web/typescript/";
+const BASE = "/sources/web/typescript/";
 
 module.exports = {
-  BASE: BASE,
+  BASE,
   INTRODUCE: BASE + "ts-introduce", //介绍
-  BASE_TYPES: BASE + "ts-base-types", //类型
-  BASE_INTERFACE_TYPES: BASE + "ts-interface-types", //接口 和 定义类型
+  TYPES: BASE + "ts-types", //类型
+  INTERFACE: BASE + "ts-interface", //接口
+  DECLARE: BASE + "ts-declare", //声明
+  ENUM: BASE + "ts-enum", //枚举
+  CLASS: BASE + "ts-class", //类
+  VUE: BASE + "ts-vue", //类
 };

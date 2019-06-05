@@ -1,4 +1,4 @@
-const BASE = "/src/web/node/";
+const BASE = "/sources/web/node/";
 
 module.exports = {
   BASE,

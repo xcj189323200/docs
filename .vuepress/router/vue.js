@@ -1,4 +1,4 @@
-const BASE = "/src/web/vue/";
+const BASE = "/sources/web/vue/";
 
 module.exports = {
   BASE,
